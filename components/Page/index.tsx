@@ -10,7 +10,7 @@ const PageTemplate = ({ title, children }: PageProps) => {
   return (
       <>
         <Head>
-          <title>{ title } | NextJS Template</title>
+          <title>{ title }Bristol Solar</title>
         </Head>
         <Header />
         <Main>

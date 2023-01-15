@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   height: 80vh;
 
   h1 {
-    font-size: 64px;
+    font-size: 5vw;
     margin-bottom: 32px;
   }
 `
@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 const IndexPage = () => {
   
   return (
-    <Page title="Home">
+    <Page>
       <Wrapper>
         <h1>☀️Bristol Solar Quote☀️</h1>
         <h2>Contact Marcus Ferro with all your Solar and Real Estate questions!</h2>
