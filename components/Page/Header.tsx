@@ -56,19 +56,7 @@ const Divider = styled.span`
   }
 `
 
-const GuestAccountNav = () => {
-  return (
-    <>
-      <Link href="/login">
-        <a>Login</a>
-      </Link>
-      <Divider />
-      <Link href="/signup">
-        <a>Sign Up</a>
-      </Link>
-    </>
-  )
-}
+
 
 const UserAccountNav = ({ username }) => {
   return (
@@ -88,24 +76,9 @@ const Header = () => {
   const user = useSelector((s:GlobalState) => s.authenticatedUser)
   return (
       <HeaderWrapper>
-      <h1>
-      <Link href="/">
-        <a>
-          <Image className="brand-logo" width="32" height="32" src="/icons/nextjs.png" alt="Brand Logo" />
-          <span className="brand-name">NextJS Template</span>
-        </a>
-      </Link>
-      </h1>
       <span className="theme-switch">
         <ThemeSwitch />
       </span>
-      <nav>
-        {
-          !user
-            ? <GuestAccountNav />
-            : <UserAccountNav username={user.username} /> 
-        }
-      </nav>
       </HeaderWrapper>
   )
 }
