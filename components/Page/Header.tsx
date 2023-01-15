@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import styled from 'styled-components'
 import { useSelector } from 'react-redux'
 import { GlobalState } from '~/store'
