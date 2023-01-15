@@ -31,37 +31,13 @@ const Card = styled.div(({ theme }:ThemeProps) => `
 `)
 
 const IndexPage = () => {
-  const { isMobile, isTablet } = useMedia()
-  const globalState = useSelector((s:GlobalState) => s)
-  const { setJwt, setUser, switchColorScheme } = useDispatcher()
-  const toggleUserSim = () => {
-    if (globalState.authenticatedUser) {
-      setJwt(null)
-      setUser(null)
-    } else {
-      setJwt('<jwt>')
-      setUser({
-        email: 'dev@example.com',
-        username: 'JustAnotherDev'
-      })
-    }
-  }
+  
   return (
     <Page title="Home">
       <Wrapper>
-        <h1>Welcome! 👋</h1>
-        <Card onClick={toggleUserSim}>
-          Simulate logging {globalState.authenticatedUser ? 'out' : 'in'}
-        </Card>
-        <Card onClick={switchColorScheme}>
-          Change to {globalState.colorScheme === ColorScheme.Dark ? 'light' : 'dark'} color scheme
-        </Card>
-        <Card>
-          Viewport is currently {
-            isMobile ? 'mobile'
-              : isTablet ? 'tablet' : 'dekstop'
-          } size
-        </Card>
+        <h1>Bristol Solar Quote!</h1>
+        <p><h2>Contact Marcus Ferro for any solar or real estate questions</h2></p>
+        <h3>Phone: 774-386-1280 <p>Email: marcusferro@gmail.com</p></h3>
       </Wrapper>
     </Page>
   )
