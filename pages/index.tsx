@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { ThemeProps } from '~/styles/theme'
 import Page from '~/components/Page'
 
 const Wrapper = styled.div`
