@@ -6,8 +6,7 @@
     "lint": "next lint",
     "lint:css": "stylelint \"**.scss\"",
     "test": "jest --watch",
-    "test:ci": "jest",
-    "prepare": "husky install"
+    "test:ci": "jest"
   },
   "dependencies": {
     "axios": "^0.24.0",
@@ -39,7 +38,6 @@
     "eslint": "^8.9.0",
     "eslint-config-next": "^12.1.0",
     "eslint-plugin-jest": "^26.1.1",
-    "husky": "^7.0.4",
     "jest": "^27.5.1",
     "sass": "^1.49.8",
     "stylelint": "^14.5.3",
