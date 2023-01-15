@@ -41,6 +41,7 @@ const App:CustomApp = ({ Component, pageProps }) => {
       </Head>
       <CustomFonts />
       <GlobalStyle />
+      <Component {...pageProps} />
     </ThemeProvider>
   )
 }

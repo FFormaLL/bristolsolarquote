@@ -18,7 +18,7 @@ const FooterWrapper = styled.footer`
 const Footer = () => {
     return (
         <FooterWrapper>
-            
+           
         </FooterWrapper>
     )
 }

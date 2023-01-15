@@ -31,7 +31,7 @@ const HeaderWrapper = styled.header(({ theme }:ThemeProps) => `
     top: -8px;
   }
   .theme-switch {
-    top: -2px;
+    top: 10px;
   }
 
   nav {
@@ -56,7 +56,12 @@ const Divider = styled.span`
   }
 `
 
-
+const GuestAccountNav = () => {
+  return (
+    <>
+    </>
+  )
+}
 
 const UserAccountNav = ({ username }) => {
   return (
@@ -79,6 +84,13 @@ const Header = () => {
       <span className="theme-switch">
         <ThemeSwitch />
       </span>
+      <nav>
+        {
+          !user
+            ? <GuestAccountNav />
+            : <UserAccountNav username={user.username} /> 
+        }
+      </nav>
       </HeaderWrapper>
   )
 }

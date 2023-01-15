@@ -31,13 +31,27 @@ const Card = styled.div(({ theme }:ThemeProps) => `
 `)
 
 const IndexPage = () => {
-  
+  const { isMobile, isTablet } = useMedia()
+  const globalState = useSelector((s:GlobalState) => s)
+  const { setJwt, setUser, switchColorScheme } = useDispatcher()
+  const toggleUserSim = () => {
+    if (globalState.authenticatedUser) {
+      setJwt(null)
+      setUser(null)
+    } else {
+      setJwt('<jwt>')
+      setUser({
+        email: 'dev@example.com',
+        username: 'JustAnotherDev'
+      })
+    }
+  }
   return (
     <Page title="Home">
       <Wrapper>
-        <h1>Bristol Solar Quote!</h1>
-        <p><h2>Contact Marcus Ferro for any solar or real estate questions</h2></p>
-        <h3>Phone: 774-386-1280 <p>Email: marcusferro@gmail.com</p></h3>
+        <h1>☀️Bristol Solar Quote☀️</h1>
+        <h2>Contact Marcus Ferro with all your Solar and Real Estate questions!</h2>
+        <h2>Phone: 774-386-1280<p>Email: Marcus.ferro3@gmail.com</p></h2>
       </Wrapper>
     </Page>
   )
